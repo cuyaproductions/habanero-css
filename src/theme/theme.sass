@@ -1,0 +1,145 @@
+@import ../util/functions
+@import ../util/mixins
+@import bourbon
+@import vars/variables
+
+//
+    DATE UPDATED:    11/03/2015
+    BY:              DIEGO HERNANDEZ
+
+.sui-opt-in
+    .vendor-container
+
+        /* ============ TYPOGAPHY ============ */
+        font-family: $font-family-base
+        font-size: $font-size-base
+        font-weight: $font-weight-base
+
+        p, ul, ol, label
+            font-family: $font-family-base
+            font-weight: $font-weight-base
+            color: $text-color
+
+        h1, h2, h3, h4, h5, h6
+            font-family: $font-family-header
+            font-weight: $font-weight-header
+            color: $text-color
+
+        .text
+            +color-options('color')
+
+        ul
+            &.list__line
+                @for $i from 1 through length($brand-colors)
+                    &__color-#{$i}
+                        border-left: .25em solid nth($brand-colors, $i)
+
+
+        /* ============ BUTTONS ============ */
+        a
+            font-family: $font-family-base
+            font-weight: $font-weight-base
+
+            &.text
+                +color-options-darken(':hover', 'color')
+
+
+        .btn
+            font-family: $font-family-base
+            font-weight: $font-weight-base
+
+            +border-radius($default-border-radius)
+
+            background-color: $text-color
+            color: reverse-color($text-color, #FFF)
+
+            &:hover
+                background-color: darken($text-color, 10%)
+                color: reverse-color(darken($text-color, 10%), #FFF)
+
+
+            &.btn__gradient
+                +linear-gradient($text-color, darken($text-color, 8%))
+                color: reverse-color(darken($text-color, 4%), #FFF)
+                &:hover
+                    +linear-gradient(darken($text-color, 8%), $text-color)
+                    color: reverse-color(darken($text-color, 4%), #FFF)
+
+            @for $i from 1 through length($brand-colors)
+                &.btn__color-#{$i}
+                    background-color: nth($brand-colors, $i)
+                    color: reverse-color(nth($brand-colors, $i), $text-color)
+                    &:hover
+                        background-color: darken(nth($brand-colors, $i), 10%)
+                        color: reverse-color(darken(nth($brand-colors, $i), 10%), $text-color)
+
+
+                    &.btn__gradient
+                        +linear-gradient(nth($brand-colors, $i), darken(nth($brand-colors, $i), 8%))
+                        color: reverse-color(darken(nth($brand-colors, $i), 4%), $text-color)
+                        &:hover
+                            +linear-gradient(darken(nth($brand-colors, $i), 8%), nth($brand-colors, $i))
+                            color: reverse-color(darken(nth($brand-colors, $i), 4%), $text-color)
+
+        /* ============ THEME ============ */
+        .background
+            @for $i from 1 through length($brand-colors)
+                &__color-#{$i}
+                    background-color: nth($brand-colors, $i)
+
+                    & *
+                        color: reverse-color(nth($brand-colors, $i), $text-color)
+
+        /* ============ FORMS ============ */
+        label
+            color: $text-color
+
+        input, select
+            +border-radius($default-border-radius)
+            color: $text-color
+
+
+        /* ============ OTHER ============ */
+        hr
+            border-top: 1px solid $text-color
+            &.hr
+                +color-options('border-top-color')
+
+        .elem
+            &__rounded
+                +border-radius($default-border-radius)
+
+        /* ============ TO BE DEPRICIATED ============ */
+
+        $primary-color: nth($brand-colors, 1)
+        $secondary-color: nth($brand-colors, 2)
+
+        .font
+            &__primary
+                color: $primary-color
+            &__secondary
+                color: $secondary-color
+
+        .link
+            &__primary
+                +link-color($primary-color)
+            &__secondary
+                +link-color($secondary-color)
+
+        .btn
+            &__primary
+                +btn-color($primary-color, $text-color)
+            &__secondary
+                +btn-color($secondary-color, $text-color)
+
+        .background
+            &__primary
+                background-color: $primary-color
+
+                & *
+                    color: reverse-color($primary-color, $text-color)
+            &__secondary
+                background-color: $secondary-color
+
+                & *
+                    color: reverse-color($secondary-color, $text-color)
