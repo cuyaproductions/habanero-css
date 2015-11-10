@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         src_dir: 'src',
         build_dir: 'build',
-        build_name: 'bootspice',
+        build_name: 'habanero',
 
         concat: {
             base: {
@@ -25,7 +25,8 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 style: 'compressed',
-                loadPath: require('node-bourbon').includePaths
+                loadPath: require('node-bourbon').includePaths,
+                sourcemap: 'none'
             },
             base: {
                 src: ['<%= src_dir %>/<%= build_name %>.sass'],

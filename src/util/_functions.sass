@@ -4,7 +4,7 @@
 
 // REVERSE TEXT COLOR BASED ON BACKGROUND
 @function reverse-color($background-color, $color)
-    @if (lightness( $background-color ) <= 50) // IF BACKGROUND COLOR IS TOO LIGHT, REVERSE TEXT COLOR TO WHITE
+    @if (lightness( darken($background-color, 10%) ) <= 50) // IF BACKGROUND COLOR IS TOO LIGHT, REVERSE TEXT COLOR TO WHITE
         @return #FFF
     @else
         // OR SET ACTUAL COLOR DESIRED

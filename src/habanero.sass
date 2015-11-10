@@ -121,18 +121,20 @@ $gutter-size: 2%
             +margin(0)
             flex-wrap: nowrap
             box-sizing: border-box
+            overflow: hidden
 
             & > *
                 +flex(1 1 auto)
                 +transition(all 200ms)
+                +display(inline-block)
                 padding: 1em
-
                 text-align: center
                 vertical-align: middle
+
                 &:hover
                     color: inherit
                     text-decoration: inherit
-                    background: rgba(black, .1)
+                    background: #f1f1f1
 
 //
     DATE UPDATED:    11/03/2015
@@ -209,6 +211,12 @@ $theme-color: #4385d0
 
             &__right
                 text-align: right
+
+            &__uppercase
+                text-transform: uppercase
+                
+            &__lowercase
+                text-transform: lowercase
 
         /* ======= LISTS ====== */
         %list
