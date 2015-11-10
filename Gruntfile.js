@@ -4,24 +4,16 @@ module.exports = function (grunt) {
         build_dir: 'build',
         build_name: 'habanero',
 
-        concat: {
-            base: {
-                options: {
-                    stripBanners: 'true',
-                    banner: '@import util/functions\n@import util/mixins\n@import bourbon\n\n'
-                },
-                src: ['<%= src_dir %>/_*.sass'],
-                dest: '<%= src_dir %>/<%= build_name %>.sass'
-            },
-            theme: {
-                options: {
-                    stripBanners: 'true',
-                    banner: '@import ../util/functions\n@import ../util/mixins\n@import bourbon\n@import vars/variables\n\n'
-                },
-                src: ['<%= src_dir %>/theme/_*.sass'],
-                dest: '<%= src_dir %>/theme/theme.sass'
-            }
-        },
+        // concat: {
+        //     base: {
+        //         options: {
+        //             stripBanners: 'true',
+        //             banner: '@import util/functions\n@import util/mixins\n@import bourbon\n\n'
+        //         },
+        //         src: ['<%= src_dir %>/_*.sass'],
+        //         dest: '<%= src_dir %>/<%= build_name %>.sass'
+        //     }
+        // },
         sass: {
             options: {
                 style: 'compressed',
@@ -41,11 +33,11 @@ module.exports = function (grunt) {
         watch: {
             base: {
                 files: ['<%= src_dir %>/_*.sass'],
-                tasks: ['concat:base', 'sass:base']
+                tasks: ['sass:base']
             },
             theme: {
-                files: ['<%= src_dir %>/theme/_*.sass', '<%= src_dir %>/theme/**/_*.sass'],
-                tasks: ['concat:theme', 'sass:theme']
+                files: ['<%= src_dir %>/theme/*.sass', '<%= src_dir %>/theme/**/*.sass'],
+                tasks: ['sass:theme']
             }
 
 
@@ -56,5 +48,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('compile', ['concat', 'sass']);
+    grunt.registerTask('compile', ['sass']);
 }
