@@ -4,16 +4,6 @@ module.exports = function (grunt) {
         build_dir: 'build',
         build_name: 'habanero',
 
-        // concat: {
-        //     base: {
-        //         options: {
-        //             stripBanners: 'true',
-        //             banner: '@import util/functions\n@import util/mixins\n@import bourbon\n\n'
-        //         },
-        //         src: ['<%= src_dir %>/_*.sass'],
-        //         dest: '<%= src_dir %>/<%= build_name %>.sass'
-        //     }
-        // },
         sass: {
             options: {
                 style: 'compressed',
@@ -21,22 +11,35 @@ module.exports = function (grunt) {
                 sourcemap: 'none'
             },
             base: {
-                src: ['<%= src_dir %>/<%= build_name %>.sass'],
+                src: ['<%= src_dir %>/<%= build_name %>.s?(a|c)ss'],
                 dest: '<%= build_dir %>/css/<%= build_name %>.css'
             },
             theme: {
-                src: ['<%= src_dir %>/theme/theme.sass'],
+                src: ['<%= src_dir %>/theme/theme.s?(a|c)ss'],
                 dest: '<%= build_dir %>/css/theme.css'
             }
         },
 
+        connect: {
+            server: {
+                options: {
+                    livereload: true,
+                    base: 'build',
+                    port: 9009
+                }
+            }
+        },
+
         watch: {
+            options: {
+                livereload: true
+            },
             base: {
-                files: ['<%= src_dir %>/_*.sass'],
+                files: ['<%= src_dir %>/_*.s?(a|c)ss'],
                 tasks: ['sass:base']
             },
             theme: {
-                files: ['<%= src_dir %>/theme/*.sass', '<%= src_dir %>/theme/**/*.sass'],
+                files: ['<%= src_dir %>/theme/*.s?(a|c)ss', '<%= src_dir %>/theme/**/*.s?(a|c)ss'],
                 tasks: ['sass:theme']
             }
 
@@ -44,9 +47,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('compile', ['sass']);
+    grunt.registerTask('serve', ['connect', 'watch']);
 }
