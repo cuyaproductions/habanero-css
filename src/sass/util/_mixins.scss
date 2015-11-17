@@ -1,0 +1,30 @@
+//
+//    DATE UPDATED:    11/03/2015
+//    BY:              DIEGO HERNANDEZ
+@import "mixins/forms";
+
+@mixin button-colors($background, $gradient: null, $direction: null) {
+    background-color: $background;
+    color: reverse-color(darken($background, 10%));
+
+    @if($gradient == gradient) {
+        @if ($direction == reverse) {
+            background: linear-gradient(darken($background, 8%), $background);
+        } @else {
+            background: linear-gradient($background, darken($background, 8%));
+        }
+    }
+}
+
+@mixin set-type($src, $type, $exceptions...) {
+    @each $prop, $val in map-get($src, $type) {
+        @if (index($exceptions, $prop) == null) {
+            @if ($prop == color) {
+                color: $val;
+            } @else {
+                font-#{$prop}: #{$val};
+            }
+        }
+    }
+    @content;
+}

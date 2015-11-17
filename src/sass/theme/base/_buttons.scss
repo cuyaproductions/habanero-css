@@ -1,0 +1,48 @@
+a {
+    @include set-type($typography, base, size, color);
+
+    &.text {
+        @each $name, $color in $brand-colors {
+            &__color-#{$name} {
+                color: $color;
+                &:hover {
+                    color: darken($color, 10%);
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    @include set-type($typography, base, size, color);
+    @include button-colors($text-color);
+    border-radius: $default-border-radius;
+
+    &:hover {
+        @include button-colors(darken($text-color, 10%));
+    }
+
+    &.btn__gradient {
+        @include button-colors($text-color, gradient);
+        &:hover {
+            @include button-colors($text-color, gradient, reverse);
+        }
+    }
+
+    @each $name, $color in $brand-colors {
+        &.btn__color-#{$name} {
+            @include button-colors($color);
+
+            &:hover {
+                @include button-colors(darken($color, 8%));
+            }
+
+            &.btn__gradient {
+                @include button-colors($color, gradient);
+                &:hover {
+                    @include button-colors($color, gradient, reverse);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+//
+//    DATE UPDATED:    11/10/2015
+//    BY:              DIEGO HERNANDEZ
+//    CLIENT:          [CLIENT NAME]
+//
+
+// TYPOGRAPHY
+$typography: (
+    base: (
+        family: "'Helvetica Neue', helvetica, arial, sans-serif",
+        size: 14px,
+        weight: 300,
+        color: #666
+    ),
+    headers: (
+        family: "'Helvetica Neue', helvetica, arial, sans-serif",
+        weight: 400
+    )
+);
+
+// COLORS
+$brand-colors: (
+    "orange": #FF5502,
+    "gray": #444
+);
+
+// OTHER
+$default-border-radius: 0.2em;
+
+
+@import "../util/functions";
+@import "../util/mixins";
+@import "theme-base";

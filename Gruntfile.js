@@ -7,16 +7,28 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 style: 'compressed',
-                loadPath: require('node-bourbon').includePaths,
                 sourcemap: 'none'
             },
             base: {
-                src: ['<%= src_dir %>/<%= build_name %>.s?(a|c)ss'],
-                dest: '<%= build_dir %>/css/<%= build_name %>.css'
+                src: ['<%= src_dir %>/sass/<%= build_name %>.s?(a|c)ss'],
+                dest: '<%= src_dir %>/css/<%= build_name %>.css'
             },
             theme: {
-                src: ['<%= src_dir %>/theme/theme.s?(a|c)ss'],
-                dest: '<%= build_dir %>/css/theme.css'
+                src: ['<%= src_dir %>/sass/theme/theme.s?(a|c)ss'],
+                dest: '<%= src_dir %>/css/theme.css'
+            }
+        },
+
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
+            files: {
+                expand: true,
+                cwd: '<%= src_dir %>/css/',
+                src: '*.css',
+                dest: '<%= build_dir %>/css/',
+                extDot: '.min.css'
             }
         },
 
@@ -25,7 +37,7 @@ module.exports = function (grunt) {
                 options: {
                     livereload: true,
                     base: 'build',
-                    port: 9009
+                    port: 9000
                 }
             }
         },
@@ -35,12 +47,12 @@ module.exports = function (grunt) {
                 livereload: true
             },
             base: {
-                files: ['<%= src_dir %>/_*.s?(a|c)ss'],
-                tasks: ['sass:base']
+                files: ['<%= src_dir %>/sass/*.s?(a|c)ss', '<%= src_dir %>/sass/**/*.s?(a|c)ss'],
+                tasks: ['sass:base', 'autoprefixer']
             },
             theme: {
-                files: ['<%= src_dir %>/theme/*.s?(a|c)ss', '<%= src_dir %>/theme/**/*.s?(a|c)ss'],
-                tasks: ['sass:theme']
+                files: ['<%= src_dir %>/sass/theme/*.s?(a|c)ss', '<%= src_dir %>/sass/theme/**/*.s?(a|c)ss'],
+                tasks: ['sass:theme', 'autoprefixer']
             }
 
 
@@ -50,6 +62,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     grunt.registerTask('serve', ['connect', 'watch']);
 }

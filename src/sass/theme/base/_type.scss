@@ -1,0 +1,39 @@
+@include set-type($typography, base);
+
+p,
+ul,
+ol,
+label {
+    @include set-type($typography, base, size) {
+        font-size: 1em;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include set-type($typography, headers, size) {
+        color: $text-color;
+    }
+}
+
+.text {
+    @each $name, $color in $brand-colors {
+        &__color-#{$name} {
+            color: $color;
+        }
+    }
+}
+
+ul {
+    &.list__line {
+        @each $name, $color in $brand-colors {
+            &__color-#{$name} {
+                border-left: 0.25em solid $color;
+            }
+        }
+    }
+}
