@@ -28,3 +28,16 @@
     }
     @content;
 }
+
+@mixin deep ($level: 0) {
+  @if level == 1 {
+    @at-root .sui-opt-in & {
+      @content;
+    }
+  } @elseif level == 2 {
+    @at-root .sui-opt-in .vendor-container & {
+      @content;
+
+    }
+  }
+}
