@@ -1,0 +1,14 @@
+{
+  "source": "./src/sass/",
+  "destination": "./build/styleguide/",
+
+  "//": "The css and js paths are URLs relative to the generated style guide.",
+  "css": [
+    "../css/habanero.css"
+  ],
+  "js": [],
+
+  "title": "Habanero Style Guide",
+  "homepage": "../../src/styleguide/homepage.md",
+  "verbose": true
+}
