@@ -1,5 +1,11 @@
 $text-color: map-get(map-get($typography, base), color);
 
+$brand-colors: map-merge($colors, (
+  white: #fff,
+  black: #000
+  )
+);
+
 @mixin button-colors($background, $gradient: null, $direction: null) {
   background-color: $background;
   color: reverse-color(darken($background, 10%));
