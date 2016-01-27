@@ -1,34 +1,29 @@
-//
-//    DATE UPDATED:    11/10/2015
-//    BY:              DIEGO HERNANDEZ
-//
+.nav {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 
-.vendor-container {
-    .nav {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 
-        display: flex;
-        align-items: stretch;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
+    &--item {
+        display: inline-block;
+        flex: 1 1 auto;
+        padding: 1em;
 
-        & a {
-            display: inline-block;
-            flex: 1 1 auto;
-            padding: 1em;
+        text-align: center;
+        vertical-align: middle;
+        transition: all 200ms;
 
-            text-align: center;
-            vertical-align: middle;
-            transition: all 200ms;
-
-            &:hover {
-                text-decoration: none;
-                background: #f1f1f1;
-            }
+        &:hover {
+          @include specificity(1) {
+            text-decoration: none;
+          }
+            background: #f1f1f1;
         }
     }
 }

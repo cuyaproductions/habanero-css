@@ -1,0 +1,7 @@
+.elem {
+    &__rounded {
+      @include specificity(2) {
+      border-radius: $default-border-radius;
+    }
+  }
+}

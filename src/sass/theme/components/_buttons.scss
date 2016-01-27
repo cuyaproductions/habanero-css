@@ -1,48 +1,54 @@
 a {
+  @include specificity(1) {
     @include set-type($typography, base, size, color);
+    
+    &:hover {
+      @include set-type($typography, base, size, color, family);
+    }
 
     &.text {
-        @each $name, $color in $brand-colors {
-            &__color-#{$name} {
-                color: $color;
-                &:hover {
-                    color: darken($color, 10%);
-                }
-            }
+      @each $name,
+      $color in $brand-colors {
+        &__color-#{$name} {
+          color: $color;
+          &:hover {
+            color: darken($color, 10%);
+          }
         }
+      }
     }
+  }
 }
 
 .btn {
+  @include specificity(1) {
     @include set-type($typography, base, size, color);
     @include button-colors($text-color);
     border-radius: $default-border-radius;
-
     &:hover {
-        @include button-colors(darken($text-color, 10%));
+      @include set-type($typography, base, size, color, family);
+      @include button-colors(darken($text-color, 10%));
     }
-
     &.btn__gradient {
-        @include button-colors($text-color, gradient);
+      @include button-colors($text-color, gradient);
+      &:hover {
+        @include button-colors($text-color, gradient, reverse);
+      }
+    }
+    @each $name,
+    $color in $brand-colors {
+      &.btn__color-#{$name} {
+        @include button-colors($color);
         &:hover {
-            @include button-colors($text-color, gradient, reverse);
+          @include button-colors(darken($color, 8%));
         }
-    }
-
-    @each $name, $color in $brand-colors {
-        &.btn__color-#{$name} {
-            @include button-colors($color);
-
-            &:hover {
-                @include button-colors(darken($color, 8%));
-            }
-
-            &.btn__gradient {
-                @include button-colors($color, gradient);
-                &:hover {
-                    @include button-colors($color, gradient, reverse);
-                }
-            }
+        &.btn__gradient {
+          @include button-colors($color, gradient);
+          &:hover {
+            @include button-colors($color, gradient, reverse);
+          }
         }
+      }
     }
+  }
 }

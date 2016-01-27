@@ -27,7 +27,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('sass', function() {
-  gulp.src(config.src + '/sass/*.s?(a|c)ss')
+  gulp.src(config.src + '/sass/**/*.s?(a|c)ss')
     .pipe(sass({
       style: 'compressed'
     }))

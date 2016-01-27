@@ -1,0 +1,12 @@
+@mixin set-type($src, $type, $exceptions...) {
+    @each $prop, $val in map-get($src, $type) {
+        @if (index($exceptions, $prop) == null) {
+            @if ($prop == color) {
+                color: $val;
+            } @else {
+                font-#{$prop}: #{$val};
+            }
+        }
+    }
+    @content;
+}

@@ -8,4 +8,19 @@
   &__right {
     text-align: right;
   }
+
+  &__small {
+    @include specificity(1) {
+      font-size: 0.8em;
+    };
+  }
+}
+
+.grid-row:after {
+  content: " ";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
 }

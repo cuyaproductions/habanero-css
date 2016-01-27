@@ -1,0 +1,14 @@
+hr {
+  @include specificity(1) {
+    border-top-color: $text-color;
+  }
+
+  &.hr {
+    @each $name,
+    $color in $brand-colors {
+      &__color-#{$name} {
+        border-top-color: $color;
+      }
+    }
+  }
+}

@@ -21,8 +21,7 @@ h1,
   }
 }
 
-h2,
-.h2 {
+h2 {
   @include specificity(2) {
     @extend %h;
     display: block;
@@ -34,6 +33,13 @@ h2,
     font-style: normal;
     font-weight: normal;
     color: #000000;
+  }
+}
+
+.h2 {
+  @include specificity(1) {
+    @extend %h;
+    font-size: 1.953em;
   }
 }
 
@@ -54,7 +60,7 @@ h4,
 }
 
 small,
-.text__small {
+.small {
   @include specificity(1) {
     font-size: 0.8em;
   };

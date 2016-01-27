@@ -1,16 +1,15 @@
 .nav {
-    @each $name, $color in $brand-colors {
-        &__color-#{$name} {
-            background: $color;
-
-            & a {
-                color: reverse-color(darken($color, 10%));
-
-                &:hover {
-                    background: darken($color, 10%);
-                    color: reverse-color(darken($color, 10%));
-                }
-            }
+  $parent: &;
+  @each $name, $color in $brand-colors {
+    &__color-#{$name} {
+      background: $color;
+      #{$parent}--item {
+        color: reverse-color($color);
+        &:hover {
+          background: darken($color, 10%);
+          color: reverse-color($color);
         }
+      }
     }
+  }
 }

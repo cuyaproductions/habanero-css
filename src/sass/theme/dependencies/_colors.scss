@@ -1,0 +1,14 @@
+$text-color: map-get(map-get($typography, base), color);
+
+@mixin button-colors($background, $gradient: null, $direction: null) {
+  background-color: $background;
+  color: reverse-color(darken($background, 10%));
+  @if($gradient == gradient) {
+    @if ($direction == reverse) {
+      background: linear-gradient(darken($background, 8%), $background);
+    }
+    @else {
+      background: linear-gradient($background, darken($background, 8%));
+    }
+  }
+}

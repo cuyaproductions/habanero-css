@@ -1,11 +1,13 @@
 .background {
-    @each $name, $color in $brand-colors {
-        &__color-#{$name} {
-            background: $color;
-
-            & * {
-                color: reverse-color(darken($color, 10%));
-            }
+  @each $name,
+  $color in $brand-colors {
+    &__color-#{$name} {
+      background: $color;
+      @include specificity(2) {
+        * {
+          color: reverse-color($color);
         }
+      }
     }
+  }
 }

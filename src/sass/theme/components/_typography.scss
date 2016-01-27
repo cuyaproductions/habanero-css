@@ -1,39 +1,50 @@
-@include set-type($typography, base);
+.vendor-container {
+  @include set-type($typography, base);
+}
 
 p,
 ul,
 ol,
 label {
+  @include specificity(1) {
     @include set-type($typography, base, size) {
-        font-size: 1em;
+      font-size: 1em;
     }
+  }
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    @include specificity(1) {
     @include set-type($typography, headers, size) {
-        color: $text-color;
+      color: $text-color;
     }
+  }
 }
+
+h2 {
+  @include specificity(2) {
+    @include set-type($typography, headers, size) {
+      color: $text-color;
+    }
+  }
+}
+
 
 .text {
-    @each $name, $color in $brand-colors {
-        &__color-#{$name} {
-            color: $color;
-        }
+  @each $name,
+  $color in $brand-colors {
+    &__color-#{$name} {
+      color: $color;
     }
-}
-
-ul {
-    &.list__line {
-        @each $name, $color in $brand-colors {
-            &__color-#{$name} {
-                border-left: 0.25em solid $color;
-            }
-        }
-    }
+  }
 }

@@ -1,36 +1,30 @@
 label {
+  @include specificity(1) {
     @extend %h;
     font-size: 1em;
+  }
 }
 
 input,
 select {
+  @include specificity(1) {
     margin-bottom: 1em;
+  }
 }
 
 input {
     &[type="radio"],
     &[type="checkbox"] {
+      @include specificity(1) {
         margin-right: 0.3em;
-        margin-top: 0.7em;
+      }
     }
 }
 
-%text-input {
-    border-radius: $theme-radius;
-    box-shadow: 0 0 0 transparent;
-    box-sizing: border-box;
-    height: 2.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    line-height: 1.45em;
-    background-color: #FFFFFF;
-    border: 1px solid #D4D4D4;
-    color: #000000;
-}
-
 select {
+  @include specificity(1) {
     @extend %text-input;
+  }
 }
 
 input {
