@@ -1,0 +1,8 @@
+hr.hr {
+  @each $name,
+  $color in $brand-colors {
+    &-#{$name} {
+      border-top-color: $color;
+    }
+  }
+}

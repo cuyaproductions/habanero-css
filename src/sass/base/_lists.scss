@@ -32,26 +32,3 @@ ul, ol {
     }
   }
 }
-
-.list {
-  &-bullet {
-    li {
-      @extend %list-bullet;
-      list-style: disc;
-    }
-  }
-
-  &-number {
-    li {
-      @extend %list-bullet;
-      list-style: decimal;
-    }
-  }
-
-  &-none {
-    li {
-      @extend %list-none;
-      list-style: none;
-    }
-  }
-}

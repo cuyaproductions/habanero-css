@@ -38,14 +38,3 @@ h2 {
     }
   }
 }
-
-
-.color {
-  @each $name, $color in $brand-colors {
-    &-#{$name} {
-      @include specificity(2) {
-        color: $color;
-      }
-    }
-  }
-}

@@ -1,9 +1,9 @@
 .background {
-  @each $name,
-  $color in $brand-colors {
+  @each $name, $color in $brand-colors {
     &-#{$name} {
-      background: $color;
       @include specificity(2) {
+        background: $color;
+        
         * {
           color: reverse-color($color);
         }

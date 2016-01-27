@@ -7,29 +7,3 @@ a {
     }
   }
 }
-
-.btn {
-  @include specificity(1) {
-    @include set-type($typography, base, color, size);
-    @each $name, $color in $brand-colors {
-      &.background-#{$name} {
-        background-color: $color;
-        color: reverse-color($color);
-        &:hover {
-          background-color: darken($color, 10%);
-        }
-        &.gradient {
-          background: linear-gradient($color, darken($color, 8%));
-
-          &:hover {
-            background: linear-gradient(darken($color, 8%), darken($color, 16%));
-          }
-
-          &:active {
-            background: linear-gradient(darken($color, 13%), darken($color, 10%));
-          }
-        }
-      }
-    }
-  }
-}
