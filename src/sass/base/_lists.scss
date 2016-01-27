@@ -1,0 +1,57 @@
+%list-base {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  padding: 0;
+  line-height: 1.45em;
+}
+
+%list-bullet {
+  margin-bottom: 0.8em;
+  margin-left: 0;
+  padding-left: 0.5em;
+  line-height: 1.45em;
+}
+
+%list-none {
+  margin-bottom: 0.8em;
+  line-height: 1.45em;
+}
+
+
+ul, ol {
+  @include specificity(1) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    padding: 0;
+    line-height: 1.45em;
+
+    li {
+      @extend %list-none;
+    }
+  }
+}
+
+.list {
+  &__bullet {
+    li {
+      @extend %list-bullet;
+      list-style: disc;
+    }
+  }
+
+  &__number {
+    li {
+      @extend %list-bullet;
+      list-style: decimal;
+    }
+  }
+
+  &__none {
+    li {
+      @extend %list-none;
+      list-style: none;
+    }
+  }
+}

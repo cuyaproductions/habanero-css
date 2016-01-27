@@ -1,0 +1,22 @@
+.sui-opt-in .vendor-container .elem {
+  &__block {
+    display: block;
+  }
+
+  &__inline {
+    display: inline;
+  }
+
+  &__inlineblock {
+    display: inline-block;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__rounded {
+    border-radius: $theme-radius;
+    overflow: hidden;
+  }
+}

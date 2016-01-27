@@ -1,0 +1,61 @@
+.vendor-container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.45em;
+}
+
+p {
+  @include specificity(1) {
+    margin-bottom: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 1.45em;
+  }
+}
+
+h1,
+.h1 {
+  @include specificity(1) {
+    @extend %h;
+    font-size: 2.441em;
+  }
+}
+
+h2,
+.h2 {
+  @include specificity(2) {
+    @extend %h;
+    display: block;
+    height: initial;
+    overflow: visible;
+    padding: 0;
+    border: none;
+    font-size: 1.953em;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+  }
+}
+
+h3,
+.h3 {
+  @include specificity(1) {
+    @extend %h;
+    font-size: 1.563em;
+  }
+}
+
+h4,
+.h4 {
+  @include specificity(1) {
+    @extend %h;
+    font-size: 1.25em;
+  }
+}
+
+small,
+.text__small {
+  @include specificity(1) {
+    font-size: 0.8em;
+  };
+}

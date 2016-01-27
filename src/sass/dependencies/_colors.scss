@@ -1,0 +1,13 @@
+$theme-color: green;
+
+
+// reverse text color based on background
+@function reverse-color($background-color) {
+    @if (lightness( darken($background-color, 10%) ) <= 50) { // if background color is too light, reverse text color to white
+        @return #FFF;
+    }
+    @else {
+        // or set actual color desired
+        @return $text-color;
+    }
+}
