@@ -1,6 +1,19 @@
-@import "util/functions";
-@import "util/mixins";
+@import "dependencies/mixins"; // to be removed
+@import "dependencies/variables";
+@import "dependencies/colors";
+@import "dependencies/typography";
+@import "dependencies/forms";
 
-@import "grid";
-@import "normalizer";
-@import "navigation";
+@import "base/body";
+@import "base/typography";
+@import "base/lists";
+@import "base/rules";
+@import "base/forms";
+
+@import "utilities/typography";
+@import "utilities/layout";
+
+@import "components/grid";
+@import "components/buttons";
+@import "components/navigation";
+@import "components/depriciate";

@@ -17,7 +17,7 @@ input {
 }
 
 %text-input {
-    border-radius: 0.2em;
+    border-radius: $theme-radius;
     box-shadow: 0 0 0 transparent;
     box-sizing: border-box;
     height: 2.5em;
