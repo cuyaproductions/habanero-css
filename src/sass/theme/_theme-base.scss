@@ -1,113 +1,92 @@
-// DATE UPDATED:    11/10/2015
-// BY:              DIEGO HERNANDEZ
-
 $text-color: map-get(map-get($typography, base), color);
-
+@import "components/typography";
+@import "components/buttons";
+@import "components/backgrounds";
+@import "components/navigation";
+@import "components/forms";
 .sui-opt-in {
-    .vendor-container {
-        @import "base/type";
-        @import "base/buttons";
-        @import "base/backgrounds";
-        @import "base/navigation";
-        @import "base/forms";
-
-        /* ============ OTHER ============ */
-        hr {
-            border-top: 1px solid $text-color;
-        }
-
-        .hr {
-            @each $name, $color in $brand-colors {
-                &__color-#{$name} {
-                    border-top-color: $color;
-                }
-            }
-        }
-
-        .elem {
-
-            &__rounded {
-                border-radius: $default-border-radius;
-            }
-        }
-
-        /* ============ TO BE DEPRICIATED ============ */
-        $primary-color: nth(map-values($brand-colors), 1);
-        $secondary-color: nth(map-values($brand-colors), 2);
-        .font {
-
-            &__primary {
-                color: $primary-color;
-            }
-
-            &__secondary {
-                color: $secondary-color;
-            }
-        }
-
-        .link {
-
-            &__primary {
-                color: $primary-color;
-                &:hover {
-                    color: darken($primary-color, 10%);
-                }
-            }
-
-            &__secondary {
-                color:$secondary-color;
-                &:hover {
-                    color: darken($secondary-color, 10%);
-                }
-            }
-        }
-
-        .btn {
-
-            &__primary {
-                @include button-colors($primary-color);
-                &:hover {
-                    @include button-colors(darken($primary-color, 10%));
-                }
-
-                &.btn__gradient {
-                    @include button-colors($primary-color, gradient);
-                    &:hover {
-                        @include button-colors($primary-color, gradient, reverse);
-                    }
-                }
-            }
-
-            &__secondary {
-                @include button-colors($secondary-color);
-                &:hover {
-                    @include button-colors(darken($secondary-color, 10%));
-                }
-
-                &.btn__gradient {
-                    @include button-colors($secondary-color, gradient);
-                    &:hover {
-                        @include button-colors($secondary-color, gradient, reverse);
-                    }
-                }
-            }
-        }
-
-        .background {
-
-            &__primary {
-                background-color: $primary-color;
-                & * {
-                    color: reverse-color($primary-color);
-                }
-            }
-
-            &__secondary {
-                background-color: $secondary-color;
-                & * {
-                    color: reverse-color($secondary-color);
-                }
-            }
-        }
+  .vendor-container {
+    /* ============ OTHER ============ */
+    hr {
+      border-top: 1px solid $text-color;
     }
+    .hr {
+      @each $name,
+      $color in $brand-colors {
+        &__color-#{$name} {
+          border-top-color: $color;
+        }
+      }
+    }
+    .elem {
+      &__rounded {
+        border-radius: $default-border-radius;
+      }
+    }
+    /* ============ TO BE DEPRICIATED ============ */
+    $primary-color: nth(map-values($brand-colors), 1);
+    $secondary-color: nth(map-values($brand-colors), 2);
+    .font {
+      &__primary {
+        color: $primary-color;
+      }
+      &__secondary {
+        color: $secondary-color;
+      }
+    }
+    .link {
+      &__primary {
+        color: $primary-color;
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+      &__secondary {
+        color: $secondary-color;
+        &:hover {
+          color: darken($secondary-color, 10%);
+        }
+      }
+    }
+    .btn {
+      &__primary {
+        @include button-colors($primary-color);
+        &:hover {
+          @include button-colors(darken($primary-color, 10%));
+        }
+        &.btn__gradient {
+          @include button-colors($primary-color, gradient);
+          &:hover {
+            @include button-colors($primary-color, gradient, reverse);
+          }
+        }
+      }
+      &__secondary {
+        @include button-colors($secondary-color);
+        &:hover {
+          @include button-colors(darken($secondary-color, 10%));
+        }
+        &.btn__gradient {
+          @include button-colors($secondary-color, gradient);
+          &:hover {
+            @include button-colors($secondary-color, gradient, reverse);
+          }
+        }
+      }
+    }
+    .background {
+      &__primary {
+        background-color: $primary-color;
+        & * {
+          color: reverse-color($primary-color);
+        }
+      }
+      &__secondary {
+        background-color: $secondary-color;
+        & * {
+          color: reverse-color($secondary-color);
+        }
+      }
+    }
+  }
 }
