@@ -1,13 +1,16 @@
 @import "../dependencies/colors";
 @import "../dependencies/mixins";
+
 @import "dependencies/colors";
 @import "dependencies/typography";
 
 @import "utilities/layout";
 
-@import "components/typography";
-@import "components/buttons";
-@import "components/backgrounds";
+@import "base/typography";
+@import "base/buttons";
+@import "base/backgrounds";
+@import "base/forms";
+@import "base/rules";
+
 @import "components/navigation";
-@import "components/forms";
-@import "components/rules";
+@import "components/depreciate";

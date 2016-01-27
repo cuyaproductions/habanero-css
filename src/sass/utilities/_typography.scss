@@ -1,25 +1,29 @@
-.sui-opt-in .vendor-container .text {
-  &__left {
+.sui-opt-in .vendor-container {
+  .left {
     text-align: left;
   }
 
-  &__center {
+  .center {
     text-align: center;
   }
 
-  &__right {
+  .right {
     text-align: right;
   }
 
-  &__uppercase {
+  .uppercase {
     text-transform: uppercase;
   }
 
-  &__lowercase {
+  .lowercase {
     text-transform: lowercase;
   }
-  
-  &__bold {
-      font-weight: bold;
+
+  .bold {
+      font-weight: bolder;
+  }
+
+  .light {
+    font-weight: lighter;
   }
 }

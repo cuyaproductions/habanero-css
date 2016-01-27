@@ -40,11 +40,12 @@ h2 {
 }
 
 
-.text {
-  @each $name,
-  $color in $brand-colors {
-    &__color-#{$name} {
-      color: $color;
+.color {
+  @each $name, $color in $brand-colors {
+    &-#{$name} {
+      @include specificity(2) {
+        color: $color;
+      }
     }
   }
 }

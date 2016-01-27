@@ -1,7 +1,6 @@
-.elem {
-    &__rounded {
-      @include specificity(2) {
-      border-radius: $default-border-radius;
-    }
+.sui-opt-in .vendor-container {
+  .rounded {
+    border-radius: $default-border-radius;
+    overflow: hidden;
   }
 }

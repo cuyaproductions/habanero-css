@@ -24,6 +24,9 @@ input {
 select {
   @include specificity(1) {
     @extend %text-input;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 }
 

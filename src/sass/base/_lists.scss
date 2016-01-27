@@ -34,21 +34,21 @@ ul, ol {
 }
 
 .list {
-  &__bullet {
+  &-bullet {
     li {
       @extend %list-bullet;
       list-style: disc;
     }
   }
 
-  &__number {
+  &-number {
     li {
       @extend %list-bullet;
       list-style: decimal;
     }
   }
 
-  &__none {
+  &-none {
     li {
       @extend %list-none;
       list-style: none;

@@ -6,7 +6,7 @@ hr {
   &.hr {
     @each $name,
     $color in $brand-colors {
-      &__color-#{$name} {
+      &-#{$name} {
         border-top-color: $color;
       }
     }

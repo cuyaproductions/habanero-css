@@ -28,7 +28,7 @@ $gutter-size: 2%;
     margin-left: $gutter-size / 2;
     margin-right: $gutter-size / 2;
     /* === NO GUTTER === */
-    &.no-gutter {
+    &.nogutter {
       width: col-width($i);
       margin-left: 0;
       margin-right: 0;
@@ -36,13 +36,13 @@ $gutter-size: 2%;
   }
   .offset-#{$i} {
     margin-left: (col-width($i) + $gutter-size / 2) !important;
-    &.no-gutter {
+    &.nogutter {
       margin-left: col-width($i) !important;
     }
   }
   .push-#{$i} {
     margin-right: (col-width($i) + $gutter-size / 2) !important;
-    &.no-gutter {
+    &.nogutter {
       margin-right: col-width($i) !important;
     }
   }
@@ -54,7 +54,7 @@ $gutter-size: 2%;
     margin-left: $gutter-size / 2;
     margin-right: $gutter-size / 2;
     /* === NO GUTTER === */
-    &.no-gutter {
+    &.nogutter {
       width: 100% / 5 * $i;
       margin-left: 0;
       margin-right: 0;
@@ -62,13 +62,13 @@ $gutter-size: 2%;
   }
   .offset-5-#{$i} {
     margin-left: (100% / 5 * $i + $gutter-size / 2) !important;
-    &.no-gutter {
+    &.nogutter {
       margin-left: (100% / 5 * $i) !important;
     }
   }
   .push-5-#{$i} {
     margin-right: (100% / 5 * $i + $gutter-size / 2) !important;
-    &.no-gutter {
+    &.nogutter {
       margin-right: (100% / 5 * $i) !important;
     }
   }

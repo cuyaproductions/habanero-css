@@ -25,26 +25,28 @@
   }
   .btn {
     &__primary {
-      @include button-colors($primary-color);
+      background-color: $primary-color;
+      color: reverse-color($primary-color);
       &:hover {
-        @include button-colors(darken($primary-color, 10%));
+        background-color: darken($primary-color, 10%);
       }
       &.btn__gradient {
-        @include button-colors($primary-color, gradient);
+        background: linear-gradient($primary-color, darken($primary-color, 8%));
         &:hover {
-          @include button-colors($primary-color, gradient, reverse);
+          background: linear-gradient(darken($primary-color, 8%), $primary-color);
         }
       }
     }
     &__secondary {
-      @include button-colors($secondary-color);
+      background-color: $secondary-color;
+      color: reverse-color($secondary-color);
       &:hover {
-        @include button-colors(darken($secondary-color, 10%));
+        background-color: darken($secondary-color, 10%);
       }
       &.btn__gradient {
-        @include button-colors($secondary-color, gradient);
+        background: linear-gradient($secondary-color, darken($secondary-color, 8%));
         &:hover {
-          @include button-colors($secondary-color, gradient, reverse);
+          background: linear-gradient(darken($secondary-color, 8%), $secondary-color);
         }
       }
     }
@@ -61,6 +63,14 @@
       & * {
         color: reverse-color($secondary-color);
       }
+    }
+  }
+  hr.hr {
+    &__primary {
+      border-top-color: $primary-color;
+    }
+    &__secondary {
+      border-top-color: $secondary-color;
     }
   }
 }

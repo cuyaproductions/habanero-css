@@ -1,7 +1,7 @@
 .background {
   @each $name,
   $color in $brand-colors {
-    &__color-#{$name} {
+    &-#{$name} {
       background: $color;
       @include specificity(2) {
         * {
