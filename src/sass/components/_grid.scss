@@ -1,27 +1,67 @@
-// set column width
-@function col-width($size) {
-  @return 100% / 12 * $size;
-}
-$container-max-width: 720px;
-$col-count: 12;
-$gutter-size: 2%;
-// Layout
+// Grid System
 //
-// Layout systems for Habanero
+// Habanero has a pretty basic grid system that you can use to you disposal to align elements most effectively.
 //
-// Styleguide Layout
+// Styleguide 1
+
+// Container
+//
+// Unlike past versions of Habanero, it is no longer necessary to have columns inside a `.grid-container` element. This class will now be used to make your design fit within the constraints of a custom vendor page tab.
+//
+// Markup:
+// <div class="grid-container">
+//   <div class="col-3">Column 3</div>
+//   <div class="col-9">Column 9</div>
+// </div>
+//
+// Styleguide 1.1
 .grid-container {
   max-width: 697px;
   margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
 }
+
+
+// Columns
+//
+// Columns are the building blocks to any development layout.
+//
+// Styleguide 1.2
+
+// 12 Columns
+//
+// The base grid system is comprised of 12-columns of which can be nested within other columns. *Keep in mind that when nesting columns you're creating a new instance of a 12-column grid*
+//
+// Markup:
+// <div class="row">
+//   <div class="col-6">
+//     Column 6
+//     <div class="row">
+//       <div class="col-5">
+//         Column 5
+//       </div>
+//       <div class="col-7">
+//         Column 7
+//       </div>
+//     </div>
+//   </div>
+//   <div class="col-3">
+//     Column 3
+//   </div>
+//   <div class="col-3">
+//     Column 3
+//   </div>
+// </div>
+//
+// Styleguide 1.2.1
 [class*='col-'] {
   display: inline-block;
   float: left;
   box-sizing: border-box;
 }
-/* ====== $COL-COUNT GRID WIDTHS ====== */
+
+
 @for $i from 1 through $col-count {
   .col-#{$i} {
     width: col-width($i) - $gutter-size;

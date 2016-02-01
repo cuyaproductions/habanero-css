@@ -17,7 +17,7 @@ function errorAlert(err) {
 
 
 gulp.task('kss', shell.task([
-  './node_modules/.bin/kss-node --watch --config kss-config.json'
+  './node_modules/.bin/kss-node --config kss-config.json'
 ]));
 
 gulp.task('watch', function() {
@@ -25,6 +25,10 @@ gulp.task('watch', function() {
   gulp.watch(['./' + config.src + '/*.html'], ['html']);
 });
 
+
+gulp.task('watch:doc', function() {
+  gulp.watch(['./' + config.src + '/sass/**/*'], ['sass', 'kss']);
+});
 
 gulp.task('sass', function() {
   gulp.src(config.src + '/sass/**/*.s?(a|c)ss')
@@ -71,6 +75,8 @@ gulp.task('open:doc', shell.task([
 ]))
 
 
-gulp.task('doc', ['sass', 'kss', 'open:doc']);
+gulp.task('doc', ['sass', 'kss']);
+gulp.task('serve:doc', ['doc', 'open:doc', 'connect', 'watch:doc']);
+
 gulp.task('default', ['sass', 'concat:vendor', 'html']);
 gulp.task('serve', ['default', 'connect', 'watch', 'open']);

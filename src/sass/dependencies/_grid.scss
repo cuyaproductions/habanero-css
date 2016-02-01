@@ -1,0 +1,8 @@
+$container-max-width: 720px;
+$col-count: 12;
+$gutter-size: 2%;
+
+
+@function col-width($size) {
+  @return 100% / 12 * $size;
+}
