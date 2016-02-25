@@ -1,0 +1,19 @@
+.list {
+  &-nobullet {
+    li {
+      list-style: none;
+    }
+  }
+  
+  &-bullet {
+    li {
+      list-style: disc;
+    }
+  }
+
+  &-number {
+    li {
+      list-style: decimal;
+    }
+  }
+}
