@@ -5,10 +5,10 @@
     @each $name, $color in $brand-colors {
       &-#{$name} {
         background-color: $color;
+
         #{$parent}__item {
           &:hover {
-            background-color: darken($color, 10%);
-            // color: reverse-color($color);
+            background: darken($color, 10%);
           }
         }
       }
