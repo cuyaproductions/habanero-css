@@ -2,196 +2,202 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Client CSS Theme Setup</title>
+  <meta charset="UTF-8">
+  <title>Client CSS Theme Setup</title>
 
-    <!-- SUI OPT IN -->
-    <link href="css/sui-opt-in.css" rel="stylesheet" />
+  <!-- SUI OPT IN -->
+  <link href="css/sui-opt-in.css" rel="stylesheet" />
 
-    <!-- BASE -->
-    <link href="css/habanero.css" rel="stylesheet" />
+  <!-- BASE -->
+  <link href="css/habanero.css" rel="stylesheet" />
 
-    <!-- THEME -->
-    <link href="css/theme/theme.css" rel="stylesheet" />
+  <!-- THEME -->
+  <link href="css/theme/theme.css" rel="stylesheet" />
 
 
-    <!-- MODIFICATONS -->
-    <style>
-        header {
-            padding: 1.7em 0 .4em 0;
-            margin-bottom: 1em;
-        }
+  <!-- MODIFICATONS -->
+  <style>
+    header {
+      padding: 1.7em 0 .4em 0;
+      margin-bottom: 1em;
+    }
 
-        .example--grid {
-            margin-bottom: .7em;
-            background-color: #dcdce4;
-            padding: .5em .2em;
-            border: 1px solid #d1d1d1;
-        }
+    .example--grid {
+      margin-bottom: .7em;
+      background-color: #dcdce4;
+      padding: .5em .2em;
+      border: 1px solid #d1d1d1;
+    }
 
-        .example--header {
-            margin-top: 1em;
-        }
+    .example--header {
+      margin-top: 1em;
+    }
 
-        .example--class {
-            padding: .1em .3em;
-            font-size: .8em;
-            background-color: #EEE;
-            border: 1px solid #CCC;
-            border-radius: .3em;
-        }
-    </style>
+    .example--class {
+      padding: .1em .3em;
+      font-size: .8em;
+      background-color: #EEE;
+      border: 1px solid #CCC;
+      border-radius: .3em;
+    }
+  </style>
 
 </head>
 
 <body class="sui-opt-in">
   <div class="section_wrap">
     <div class="vendor-container">
-        <div class="uikit">
-            <header class="background-orange">
-                <div class="grid-container">
-                    <h1 class="col-12 center">Advertising UI Kit</h1>
-                </div>
-            </header>
-            <div class="container grid-container">
-                <div class="row">
-                    <h2 class="col-12">Typography</h2>
-                    <div class="col-6">
-                        <h1>Header 1</h1>
-                        <h2>Header 2</h2>
-                        <h3>Header 3</h3>
-                        <h4>Header 4</h4>
-                        <small>Small</small>
-                        <p>Paragraph Mauris venenatis in diam non ultrices. Donec quis libero at tortor efficitur lacinia id feugiat nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
-                    </div>
-                    <div class="col-6">
-                        <h3 class="example--header">Links</h3>
-                        <p><a href="#">Link with no class modification</a></p>
-                        <p><a href="#" class="color-orange">Link with <span class="example--class">.color-orange</span></a></p>
-                        <p><a href="#" class="color-gray">Link with <span class="example--class">.color-gray</span></a></p>
-
-                        <h3>Lists</h3>
-                        <ul class="list-bullet">
-                            <li>List item</li>
-                            <li>List item</li>
-                            <li>List item</li>
-                            <li>List item</li>
-                            <li class="color-orange">List item with <span class="example--class">.color-orange</span></li>
-                            <li class="color-gray">List item with <span class="example--class">.color-gray</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <h2 class="example--header">Navigation</h2>
-                    <div class="nav background-orange" style="margin-bottom: 2em">
-                        <a class="nav__item" href="#">Pimiento</a>
-                        <a class="nav__item" href="#">Sonora</a>
-                        <a class="nav__item" href="#">Anaheim</a>
-                        <a class="nav__item" href="#">Really really reall long</a>
-                        <a class="nav__item" href="#">Chipotle</a>
-                        <a class="nav__item" href="#">Habanero</a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="example--header">Forms</h2>
-                    </div>
-                    <div class="col-6">
-                        <h3>Input</h3>
-                        <input type="email" class="col-4" value=".col-4">
-                        <input type="text" class="col-8" value=".col-8">
-
-                        <select class="col-12">
-                            <option selected>.col-12</option>
-                            <option>This option</option>
-                        </select>
-                        <div class="col-12">
-                            <input type="radio" id="radio"> <label for="radio" class="elem__inline">Label for radio</label>
-                        </div>
-
-                        <div class="col-12">
-                        <input type="checkbox" id="check"> <label for="check" class="elem__inline">Label for checkbox</label>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h3>Buttons</h3>
-                        <div class="row">
-                            <button class="btn">.btn</button>
-                        </div>
-                        <div class="row">
-                            <input type="submit" class="btn background-orange" value="+ .background-orange">
-                            <input type="submit" class="btn background-orange gradient" value="+ .gradient">
-                        </div>
-                        <div class="row">
-                            <a href="#" class="btn background-gray">+ .background-gray</a>
-                            <a href="#" class="btn background-gray gradient">+ .gradient</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <hr class="hr-orange" />
-
-                <div class="row col-12">
-                    <h2 class="example--header">12-column</h2>
-                </div>
-                <div class="row">
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                    <div class="col-1 example--grid">.col-1</div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3 example--grid">.col-3</div>
-                    <div class="col-3 example--grid">.col-3</div>
-                    <div class="col-3 example--grid">.col-3</div>
-                    <div class="col-3 example--grid">.col-3</div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3 example--grid">.col-3
-                        <div class="row">
-                            <div class="col-6 example--grid">.col-6</div>
-                            <div class="col-6 example--grid">.col-6</div>
-                        </div>
-                    </div>
-                    <div class="col-9 example--grid">.col-9
-                        <div class="row">
-                            <div class="col-3 example--grid">.col-3</div>
-                            <div class="col-3 example--grid">.col-3</div>
-                            <div class="col-6 example--grid">.col-6</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-8 example--grid">.col-8</div>
-                    <div class="col-4 example--grid">.col-4</div>
-                </div>
-                <div class="row">
-                    <div class="col-5-5">
-                        <h2 class="example--header">5-column grid</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-5-3 example--grid">.col-5-3</div>
-                    <div class="col-5-2 example--grid">.col-5-2</div>
-                    <div class="col-5-4 example--grid">.col-5-4</div>
-                    <div class="col-5-1 example--grid">.col-5-1</div>
-                </div>
+      <div class="uikit">
+        <header class="background-orange">
+          <div class="grid-container">
+            <h1 class="col-12 center color-white">Advertising UI Kit</h1>
+          </div>
+        </header>
+        <div class="container grid-container">
+          <div class="row">
+            <h2 class="col-12">Typography</h2>
+            <div class="col-6">
+              <h1>Header 1</h1>
+              <h2>Header 2</h2>
+              <h3>Header 3</h3>
+              <h4>Header 4</h4>
+              <small>Small</small>
+              <p>Paragraph Mauris venenatis in diam non ultrices. Donec quis libero at tortor efficitur lacinia id feugiat nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
             </div>
+            <div class="col-6">
+              <h3 class="example--header">Links</h3>
+              <p><a href="#">Link with no class modification</a></p>
+              <p><a href="#" class="color-orange">Link with <span class="example--class">.color-orange</span></a></p>
+              <p><a href="#" class="color-gray">Link with <span class="example--class">.color-gray</span></a></p>
+
+              <h3>Lists</h3>
+              <ul class="list-bullet">
+                <li>List item</li>
+                <li>List item</li>
+                <li>List item</li>
+                <li>List item</li>
+                <li class="color-orange">List item with
+                  <span class="example--class">.color-orange</span>
+                </li>
+                <li class="color-gray">List item with
+                  <span class="example--class">.color-gray</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <h2 class="example--header">Navigation</h2>
+            <div class="nav background-orange" style="margin-bottom: 2em">
+              <a class="nav__item color-white" href="#">Pimiento</a>
+              <a class="nav__item color-white" href="#">Sonora</a>
+              <a class="nav__item color-white" href="#">Anaheim</a>
+              <a class="nav__item color-white" href="#">Really really reall long</a>
+              <a class="nav__item color-white" href="#">Chipotle</a>
+              <a class="nav__item color-white" href="#">Habanero</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <h2 class="example--header">Forms</h2>
+            </div>
+            <div class="col-6">
+              <h3>Input</h3>
+              <input type="email" class="col-4" value=".col-4">
+              <input type="text" class="col-8" value=".col-8">
+
+              <select class="col-12">
+                <option selected>.col-12</option>
+                <option>This option</option>
+              </select>
+              <div class="col-12">
+                <input type="radio" id="radio">
+                <label for="radio" class="elem__inline">Label for radio</label>
+              </div>
+
+              <div class="col-12">
+                <input type="checkbox" id="check">
+                <label for="check" class="elem__inline">Label for checkbox</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <h3>Buttons</h3>
+              <div class="row">
+                <button class="btn">.btn</button>
+              </div>
+              <div class="row">
+                <input type="submit" class="btn background-orange" value="+ .background-orange">
+                <input type="submit" class="btn background-orange gradient" value="+ .gradient">
+              </div>
+              <div class="row">
+                <a href="#" class="btn background-gray">+ .background-gray</a>
+                <a href="#" class="btn background-gray gradient">+ .gradient</a>
+              </div>
+
+            </div>
+          </div>
+
+          <hr class="hr-orange" />
+
+          <div class="row col-12">
+            <h2 class="example--header">12-column</h2>
+          </div>
+          <div class="row">
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+            <div class="col-1 example--grid">.col-1</div>
+          </div>
+
+          <div class="row">
+            <div class="col-3 example--grid">.col-3</div>
+            <div class="col-3 example--grid">.col-3</div>
+            <div class="col-3 example--grid">.col-3</div>
+            <div class="col-3 example--grid">.col-3</div>
+          </div>
+
+          <div class="row">
+            <div class="col-3 example--grid">.col-3
+              <div class="row">
+                <div class="col-6 example--grid">.col-6</div>
+                <div class="col-6 example--grid">.col-6</div>
+              </div>
+            </div>
+            <div class="col-9 example--grid">.col-9
+              <div class="row">
+                <div class="col-3 example--grid">.col-3</div>
+                <div class="col-3 example--grid">.col-3</div>
+                <div class="col-6 example--grid">.col-6</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8 example--grid">.col-8</div>
+            <div class="col-4 example--grid">.col-4</div>
+          </div>
+          <div class="row">
+            <div class="col-5-5">
+              <h2 class="example--header">5-column grid</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5-3 example--grid">.col-5-3</div>
+            <div class="col-5-2 example--grid">.col-5-2</div>
+            <div class="col-5-4 example--grid">.col-5-4</div>
+            <div class="col-5-1 example--grid">.col-5-1</div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </body>

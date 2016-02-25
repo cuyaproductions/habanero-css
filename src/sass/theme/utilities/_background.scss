@@ -3,10 +3,6 @@
     &-#{$name} {
       @include specificity(2) {
         background: $color;
-        
-        * {
-          color: reverse-color($color);
-        }
       }
     }
   }
