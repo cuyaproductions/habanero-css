@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 var config = {
   src: 'src',
   build: 'build'
-}
+};
 
 function errorAlert(err) {
   console.log(err.toString());
@@ -57,14 +57,14 @@ gulp.task('html', function() {
   .on('error', errorAlert)
   .pipe(gulp.dest(config.build))
   .pipe(connect.reload());
-})
+});
 
 gulp.task('concat:vendor', function() {
   gulp.src(config.src + '/vendor/*')
   .pipe(concat('sui-opt-in.css'))
   .on('error', errorAlert)
-  .pipe(gulp.dest(config.build + '/css'))
-})
+  .pipe(gulp.dest(config.build + '/css'));
+});
 
 gulp.task('open', shell.task([
   'open http://localhost:9000'
@@ -72,7 +72,7 @@ gulp.task('open', shell.task([
 
 gulp.task('open:doc', shell.task([
   'open ./build/styleguide/index.html'
-]))
+]));
 
 
 gulp.task('doc', ['sass', 'kss']);
