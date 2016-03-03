@@ -1,19 +1,21 @@
-.list {
-  &-nobullet {
-    li {
-      list-style: none;
+.sui-opt-in .vendor-container {
+  .list {
+    &-nobullet {
+      li {
+        list-style: none;
+      }
     }
-  }
-  
-  &-bullet {
-    li {
-      list-style: disc;
-    }
-  }
 
-  &-number {
-    li {
-      list-style: decimal;
+    &-bullet {
+      li {
+        list-style: disc;
+      }
+    }
+
+    &-number {
+      li {
+        list-style: decimal;
+      }
     }
   }
 }

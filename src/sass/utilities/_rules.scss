@@ -1,4 +1,4 @@
-hr.hr {
+.vendor-container hr.hr {
   @each $name,
   $color in $brand-colors {
     &-#{$name} {

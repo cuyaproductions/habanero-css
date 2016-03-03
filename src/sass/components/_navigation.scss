@@ -1,4 +1,5 @@
 .nav {
+  @include specificity(2) {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -11,19 +12,18 @@
     justify-content: space-around;
 
     &__item {
-        display: inline-block;
-        flex: 1 1 auto;
-        padding: 1em;
+      display: inline-block;
+      flex: 1 1 auto;
+      padding: 1em;
 
-        text-align: center;
-        vertical-align: middle;
-        transition: background-color 150ms;
+      text-align: center;
+      vertical-align: middle;
+      transition: background-color 150ms;
 
-        &:hover {
-          @include specificity(1) {
-            text-decoration: none;
-          }
-            background-color: #f1f1f1;
-        }
+      &:hover {
+        text-decoration: none;
+        background-color: #f1f1f1;
+      }
     }
+  }
 }
