@@ -19,10 +19,11 @@ $typography: (
 
 $colors: (
     "orange": #FF5502,
-    "gray": #444
+    "gray": #444,
+    "blue": #3399ff
 );
 
-$border-radius: 0.2em;
+$border-radius: 0.3em;
 
 
 @import "theme-base";
