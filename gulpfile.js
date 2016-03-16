@@ -33,7 +33,7 @@ gulp.task('watch:doc', function() {
 gulp.task('sass', function() {
   gulp.src(config.src + '/sass/**/*.s?(a|c)ss')
     .pipe(sass({
-      style: 'compressed'
+      outputStyle: 'compressed'
     }))
     .on('error', errorAlert)
     .pipe(prefix({
