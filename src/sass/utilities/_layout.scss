@@ -1,3 +1,18 @@
+// Displaying
+//
+// This group of classes will allow you to give an element a different display style
+//
+// Markup:
+// <div class="{{modifier_class}}" style="background-color: #CCC">
+//   .{{modifier_class}}
+// </div>
+//
+// .block         - display: block;
+// .inline        - display: inline;
+// .inline-block  - display: inline-block;
+// .hidden        - display: none;
+//
+// Styleguide 4.1
 .sui-opt-in .vendor-container {
   .block {
     display: block;
