@@ -152,6 +152,22 @@
       }
     }
   }
+
+  // Floating
+  //
+  // The following classes will help you float a column to either side of its parent container
+  //
+  // Markup:
+  // <div class="row">
+  //   <div class="col-4 {{modifier_class}}">
+  //     Column using .{{modifier_class}}
+  //   </div>
+  // </div>
+  //
+  // .float-left   - Float to the left (default)
+  // .float-right  - Float to the right
+  //
+  // Styleguide 1.2.4
   .float-right {
     float: right;
   }
