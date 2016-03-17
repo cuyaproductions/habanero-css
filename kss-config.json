@@ -4,9 +4,9 @@
 
   "//": "The css and js paths are URLs relative to the generated style guide.",
   "css": [
-    "../css/habanero.css",
-    "../css/theme/theme.css",
-    "../css/styleguide.css"
+    "../habanero.css",
+    "../theme/theme.css",
+    "../styleguide.css"
   ],
   "js": [],
 
