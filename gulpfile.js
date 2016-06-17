@@ -16,9 +16,14 @@ function errorAlert(err) {
 }
 
 
-gulp.task('kss', shell.task([
-  './node_modules/.bin/kss-node --config kss-config.json'
-]));
+gulp.task('kss', function () {
+  gulp.src(config.src + '/styleguide/*')
+  .pipe(shell([
+      './node_modules/.bin/kss-node --config kss-config.json'
+  ]))
+  .pipe(connect.reload());
+}
+);
 
 gulp.task('watch', function() {
   gulp.watch(['./' + config.src + '/sass/**/*'], ['sass']);
@@ -28,6 +33,7 @@ gulp.task('watch', function() {
 
 gulp.task('watch:doc', function() {
   gulp.watch(['./' + config.src + '/sass/**/*'], ['sass', 'kss']);
+  gulp.watch(['./kss-config.json', './' + config.src + '/styleguide/*'], ['kss']);
 });
 
 gulp.task('sass', function() {
@@ -39,7 +45,7 @@ gulp.task('sass', function() {
     .pipe(prefix({
       browsers: ['last 2 versions']
     }))
-    .pipe(gulp.dest(config.build + '/css/'))
+    .pipe(gulp.dest(config.build + '/'))
     .pipe(connect.reload());
 });
 
@@ -52,12 +58,6 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('html', function() {
-  gulp.src(config.src + '/*.html')
-  .on('error', errorAlert)
-  .pipe(gulp.dest(config.build))
-  .pipe(connect.reload());
-});
 
 gulp.task('concat:vendor', function() {
   gulp.src(config.src + '/vendor/*')
@@ -71,12 +71,12 @@ gulp.task('open', shell.task([
 ]));
 
 gulp.task('open:doc', shell.task([
-  'open ./build/styleguide/index.html'
+  'open http://localhost:9000/styleguide'
 ]));
 
 
 gulp.task('doc', ['sass', 'kss']);
 gulp.task('serve:doc', ['doc', 'open:doc', 'connect', 'watch:doc']);
 
-gulp.task('default', ['sass', 'concat:vendor', 'html']);
+gulp.task('default', ['sass', 'concat:vendor']);
 gulp.task('serve', ['default', 'connect', 'watch', 'open']);

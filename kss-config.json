@@ -4,11 +4,13 @@
 
   "//": "The css and js paths are URLs relative to the generated style guide.",
   "css": [
-    "../css/habanero.css"
+    "../habanero.css",
+    "../theme/theme.css",
+    "../styleguide.css"
   ],
   "js": [],
 
-  "title": "Habanero Style Guide",
+  "title": "Habanero Style Guide 2.0.2",
   "homepage": "../../src/styleguide/homepage.md",
   "verbose": true
 }

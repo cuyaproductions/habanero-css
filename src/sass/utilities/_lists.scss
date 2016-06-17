@@ -1,3 +1,18 @@
+// Lists
+//
+// Markup:
+// <ul class="{{modifier_class}}">
+//   <li>Item 1</li>
+//   <li>Item 2</li>
+//   <li>Item 3</li>
+//   <li>Item 4</li>
+// </ul>
+//
+// .list-nobullet  - Non-bulleted list (default)
+// .list-bullet    - Bulleted list
+// .list-number    - Numbered list (Use `<ol>` tag for this)
+//
+// Styleguide 2.3
 .sui-opt-in .vendor-container {
   .list {
     &-nobullet {

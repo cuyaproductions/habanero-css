@@ -1,3 +1,17 @@
+// Backgrounds
+//
+// Add any of your client's brand colors by adding the `.background-{color_name}`
+//
+// Markup:
+// <div class="{{modifier_class}}">
+//   .{{modifier_class}}
+// </div>
+//
+// .background-orange  - Background color
+// .background-gray    - Background color
+// .background-blue    - Background color
+//
+// Styleguide 5.1
 .background {
   @each $name, $color in $brand-colors {
     &-#{$name} {

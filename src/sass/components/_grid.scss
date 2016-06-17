@@ -75,6 +75,28 @@
         margin-right: 0;
       }
     }
+    // Spacing
+    //
+    // To modify spacing around and between columns you may use the following classes
+    //
+    // Markup:
+    // <div class="row">
+    //   <div class="col-3">
+    //     Regular column
+    //   </div>
+    //   <div class="col-4 {{modifier_class}}">
+    //     Modified column with .{{modifier_class}}
+    //   </div>
+    //   <div class="col-3">
+    //     Regular column
+    //   </div>
+    // </div>
+    //
+    // .nogutter  - Remove margins around column
+    // .offset-2  - Add spacing *before* column. The number after signifies a regular column width of spacing (2 columns wide in this example).
+    // .push-2    - Add spacing *after* column. The number after signifies a regular column width of spacing (2 columns wide in this example).
+    //
+    // Styleguide 1.2.3
     .offset-#{$i} {
       margin-left: (col-width($i) + $gutter-size / 2) !important;
       &.nogutter {
@@ -88,7 +110,23 @@
       }
     }
   }
-  /* ====== 5 COLUMN GRID WIDTHS ====== */
+
+  // 5 Columns
+  //
+  // For situations when you need to have 5 columns you have a 5 column grid at your disposal
+  //
+  // Markup:
+  // <div class="row">
+  //   <div class="col-5-2">
+  //     Column 2 of 5
+  //   </div>
+  //   <div class="col-5-3">
+  //     Column 3 of 5
+  //   </div>
+  // </div>
+  //
+  // Styleguide 1.2.2
+
   @for $i from 1 through 5 {
     .col-5-#{$i} {
       width: 100% / 5 * $i - $gutter-size;
@@ -114,6 +152,22 @@
       }
     }
   }
+
+  // Floating
+  //
+  // The following classes will help you float a column to either side of its parent container
+  //
+  // Markup:
+  // <div class="row">
+  //   <div class="col-4 {{modifier_class}}">
+  //     Column using .{{modifier_class}}
+  //   </div>
+  // </div>
+  //
+  // .float-left   - Float to the left (default)
+  // .float-right  - Float to the right
+  //
+  // Styleguide 1.2.4
   .float-right {
     float: right;
   }
