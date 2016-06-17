@@ -13,24 +13,22 @@
 // .list-number    - Numbered list (Use `<ol>` tag for this)
 //
 // Styleguide 2.3
-.sui-opt-in .vendor-container {
-  .list {
-    &-nobullet {
-      li {
-        list-style: none;
-      }
+.list {
+  &-nobullet {
+    li {
+      list-style: none;
     }
+  }
 
-    &-bullet {
-      li {
-        list-style: disc;
-      }
+  &-bullet {
+    li {
+      list-style: disc;
     }
+  }
 
-    &-number {
-      li {
-        list-style: decimal;
-      }
+  &-number {
+    li {
+      list-style: decimal;
     }
   }
 }

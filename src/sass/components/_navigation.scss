@@ -12,31 +12,29 @@
 //
 // Styleguide 3
 .nav {
-  @include specificity(2) {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 
-    &__item {
-      display: inline-block;
-      flex: 1 1 auto;
-      padding: 1em;
+  &__item {
+    display: inline-block;
+    flex: 1 1 auto;
+    padding: 1em;
 
-      text-align: center;
-      vertical-align: middle;
-      transition: background-color 150ms;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 150ms;
 
-      &:hover {
-        text-decoration: none;
-        background-color: #f1f1f1;
-      }
+    &:hover {
+      text-decoration: none;
+      background-color: #f1f1f1;
     }
   }
 }

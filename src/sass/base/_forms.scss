@@ -1,37 +1,27 @@
 label {
-  @include specificity(1) {
-    @extend %h;
-    font-size: 1em;
-  }
+  @extend %h;
+  font-size: 1em;
 }
 
 input,
 select {
-  @include specificity(1) {
-    margin-bottom: 1em;
-  }
+  margin-bottom: 1em;
 }
 
 input {
-    &[type="radio"],
-    &[type="checkbox"] {
-      @include specificity(1) {
-        margin-right: 0.3em;
-      }
-    }
+  &[type="radio"],
+  &[type="checkbox"] {
+      margin-right: 0.3em;
+  }
 }
 
 select {
-  @include specificity(1) {
-    @extend %text-input;
-    width: 98%;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
+  @extend %text-input;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 input {
-    @include text-inputs() {
-        @extend %text-input;
-    }
+  @extend %text-input;
 }

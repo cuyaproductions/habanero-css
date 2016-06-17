@@ -20,15 +20,13 @@
 
 
 ul, ol {
-  @include specificity(1) {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 2em;
-    padding: 0;
-    line-height: 1.45em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  padding: 0;
+  line-height: 1.45em;
 
-    li {
-      @extend %list-none;
-    }
+  li {
+    @extend %list-none;
   }
 }

@@ -1,77 +1,75 @@
-.sui-opt-in .vendor-container {
-  .font {
-    &__left {
-      text-align: left;
-    }
-    &__center {
-      text-align: center;
-    }
-    &__right {
-      text-align: right;
-    }
+.font {
+  &__left {
+    text-align: left;
+  }
+  &__center {
+    text-align: center;
+  }
+  &__right {
+    text-align: right;
+  }
 
-    &__small {
-      font-size: 0.8em;
+  &__small {
+    font-size: 0.8em;
+  }
+}
+.object {
+  &__block {
+    display: block;
+  }
+  &__inline {
+    display: inline;
+  }
+  &__inlineblock {
+    display: inline-block;
+  }
+  &__hidden {
+    display: none;
+  }
+}
+%list {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  padding: 0;
+  line-height: 1.45em;
+}
+%bullet-list {
+  margin-bottom: 0.8em;
+  margin-left: 0;
+  padding-left: 0.5em;
+}
+%no-list {
+  margin-bottom: 0.8em;
+  margin-left: -2em;
+}
+ul {
+  @extend %list;
+  &.list__bullet {
+    li {
+      @extend %bullet-list;
+      list-style: disc;
     }
   }
-  .object {
-    &__block {
-      display: block;
-    }
-    &__inline {
-      display: inline;
-    }
-    &__inlineblock {
-      display: inline-block;
-    }
-    &__hidden {
-      display: none;
+  &.list__nobullet {
+    li {
+      @extend %no-list;
+      list-style: none;
     }
   }
-  %list {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 2em;
-    padding: 0;
-    line-height: 1.45em;
-  }
-  %bullet-list {
-    margin-bottom: 0.8em;
-    margin-left: 0;
-    padding-left: 0.5em;
-  }
-  %no-list {
-    margin-bottom: 0.8em;
-    margin-left: -2em;
-  }
-  ul {
-    @extend %list;
-    &.list__bullet {
-      li {
-        @extend %bullet-list;
-        list-style: disc;
-      }
-    }
-    &.list__nobullet {
-      li {
-        @extend %no-list;
-        list-style: none;
-      }
+}
+ol {
+  @extend %list;
+  &.list__bullet {
+    li {
+      @extend %bullet-list;
+      list-style: decimal;
     }
   }
-  ol {
-    @extend %list;
-    &.list__bullet {
-      li {
-        @extend %bullet-list;
-        list-style: decimal;
-      }
-    }
-    &.list__nobullet {
-      li {
-        @extend %no-list;
-        list-style: none;
-      }
+  &.list__nobullet {
+    li {
+      @extend %no-list;
+      list-style: none;
     }
   }
 }

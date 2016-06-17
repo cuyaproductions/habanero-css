@@ -22,12 +22,10 @@
 //
 // Styleguide 2.1
 p {
-  @include specificity(1) {
-    margin-bottom: 1em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    line-height: 1.45em;
-  }
+  margin-bottom: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1.45em;
 }
 
 // Utilities
@@ -52,10 +50,8 @@ p {
 // Styleguide 2.2.1
 h1,
 .h1 {
-  @include specificity(1) {
-    @extend %h;
-    font-size: 2.441em;
-  }
+  @extend %h;
+  font-size: 2.441em;
 }
 
 .h1 {
@@ -63,34 +59,28 @@ h1,
 }
 
 h2 {
-  @include specificity(2) {
-    @extend %h;
-    display: block;
-    height: initial;
-    overflow: visible;
-    padding: 0;
-    border: none;
-    font-size: 1.953em;
-    font-style: normal;
-    font-weight: normal;
-    color: #000000;
-  }
+  @extend %h;
+  display: block;
+  height: initial;
+  overflow: visible;
+  padding: 0;
+  border: none;
+  font-size: 1.953em;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
 }
 
 .h2 {
-  @include specificity(1) {
-    @extend %h;
-    font-size: 1.953em;
-    display: block;
-  }
+  @extend %h;
+  font-size: 1.953em;
+  display: block;
 }
 
 h3,
 .h3 {
-  @include specificity(1) {
-    @extend %h;
-    font-size: 1.563em;
-  }
+  @extend %h;
+  font-size: 1.563em;
 }
 
 .h3 {
@@ -99,10 +89,8 @@ h3,
 
 h4,
 .h4 {
-  @include specificity(1) {
-    @extend %h;
-    font-size: 1.25em;
-  }
+  @extend %h;
+  font-size: 1.25em;
 }
 
 .h3 {
@@ -111,7 +99,5 @@ h4,
 
 small,
 .small {
-  @include specificity(1) {
-    font-size: 0.8em;
-  };
+  font-size: 0.8em;
 }

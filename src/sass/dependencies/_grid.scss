@@ -6,3 +6,9 @@ $gutter-size: 2%;
 @function col-width($size) {
   @return 100% / 12 * $size;
 }
+
+@mixin column {
+  display: inline-block;
+  float: left;
+  box-sizing: border-box;
+}

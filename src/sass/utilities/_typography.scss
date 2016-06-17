@@ -1,64 +1,62 @@
-.sui-opt-in .vendor-container {
-  // Alignment
-  //
-  // Align text with ease
-  //
-  // Markup:
-  // <h1 class="{{modifier_class}}">Header</h1>
-  // <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo ut arcu fringilla varius. Vestibulum lectus turpis, consectetur sit amet pellentesque non, convallis id purus. Suspendisse suscipit dui lacus, eget finibus nibh aliquet eget.</p>
-  //
-  // .left   - Align Left
-  // .center - Align Center
-  // .right  - Align Right
-  //
-  // Styleguide 2.2.2
-  .left {
-    text-align: left;
-  }
+// Alignment
+//
+// Align text with ease
+//
+// Markup:
+// <h1 class="{{modifier_class}}">Header</h1>
+// <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo ut arcu fringilla varius. Vestibulum lectus turpis, consectetur sit amet pellentesque non, convallis id purus. Suspendisse suscipit dui lacus, eget finibus nibh aliquet eget.</p>
+//
+// .left   - Align Left
+// .center - Align Center
+// .right  - Align Right
+//
+// Styleguide 2.2.2
+.left {
+  text-align: left;
+}
 
-  .center {
-    text-align: center;
-  }
+.center {
+  text-align: center;
+}
 
-  .right {
-    text-align: right;
-  }
+.right {
+  text-align: right;
+}
 
-  // Weight
-  //
-  // Make all of the text in your element either bolder or lighter (sometimes).
-  //
-  // Markup:
-  // <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo ut arcu fringilla varius.</p>
-  //
-  // .bold  - bold
-  // .light  - light
-  //
-  // Styleguide 2.2.3
-  .bold {
-      font-weight: bolder;
-  }
+// Weight
+//
+// Make all of the text in your element either bolder or lighter (sometimes).
+//
+// Markup:
+// <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo ut arcu fringilla varius.</p>
+//
+// .bold  - bold
+// .light  - light
+//
+// Styleguide 2.2.3
+.bold {
+    font-weight: bolder;
+}
 
-  .light {
-    font-weight: lighter;
-  }
+.light {
+  font-weight: lighter;
+}
 
-  // Casing
-  //
-  // Make all of the text in your element either all uppercase or lower case
-  //
-  // Markup:
-  // <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo ut arcu fringilla varius.</p>
-  //
-  // .uppercase  - UPPERCASE
-  // .lowercase  - lowercase
-  //
-  // Styleguide 2.2.4
-  .uppercase {
-    text-transform: uppercase;
-  }
+// Casing
+//
+// Make all of the text in your element either all uppercase or lower case
+//
+// Markup:
+// <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo ut arcu fringilla varius.</p>
+//
+// .uppercase  - UPPERCASE
+// .lowercase  - lowercase
+//
+// Styleguide 2.2.4
+.uppercase {
+  text-transform: uppercase;
+}
 
-  .lowercase {
-    text-transform: lowercase;
-  }
+.lowercase {
+  text-transform: lowercase;
 }

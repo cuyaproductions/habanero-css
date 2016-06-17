@@ -1,22 +1,24 @@
-@import "dependencies/mixins";
-@import "dependencies/variables";
-@import "dependencies/colors";
-@import "dependencies/typography";
-@import "dependencies/forms";
-@import "dependencies/grid";
+.sui-opt-in .vendor-container {
+  @import "dependencies/mixins";
+  @import "dependencies/variables";
+  @import "dependencies/colors";
+  @import "dependencies/typography";
+  @import "dependencies/forms";
+  @import "dependencies/grid";
 
-@import "base/body";
-@import "base/typography";
-@import "base/lists";
-@import "base/rules";
-@import "base/forms";
+  @import "base/body";
+  @import "base/typography";
+  @import "base/lists";
+  @import "base/rules";
+  @import "base/forms";
 
-@import "utilities/main";
-@import "utilities/typography";
-@import "utilities/layout";
-@import "utilities/lists";
+  @import "utilities/main";
+  @import "utilities/typography";
+  @import "utilities/layout";
+  @import "utilities/lists";
 
-@import "components/grid";
-@import "components/buttons";
-@import "components/navigation";
-@import "components/depreciate";
+  @import "components/grid";
+  @import "components/buttons";
+  @import "components/navigation";
+  @import "components/depreciate";
+}

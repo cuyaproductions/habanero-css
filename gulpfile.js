@@ -52,7 +52,7 @@ gulp.task('sass', function() {
 
 gulp.task('connect', function() {
   connect.server({
-    root: config.build,
+    root: process.cwd(),
     port: 9000,
     livereload: true
   });
