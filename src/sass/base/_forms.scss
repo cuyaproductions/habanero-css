@@ -1,6 +1,56 @@
+@mixin text-inputs(){
+    &[type="color"],
+    &[type^="date"],
+    &[type="email"],
+    &[type="url"],
+    &[type="search"],
+    &[type="number"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="password"], {
+        @content;
+    }
+}
+
+@mixin non-text-inputs(){
+    &[type="button"],
+    &[type="checkbox"],
+    &[type="color"],
+    &[type="hidden"],
+    &[type="range"],
+    &[type="image"],
+    &[type="reset"],
+    &[type="radio"], {
+        @content;
+    }
+}
+
+%text-input {
+    border-radius: map-get($THEME, radius);
+    box-shadow: 0 0 0 transparent;
+    box-sizing: border-box;
+    height: 2.5em;
+    font-family: unquote(map-get($FONT, family));
+    font-size: 1em;
+    line-height: inherit;
+    background-color: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    color: inherit;
+
+    &:focus {
+      border: 1px solid #D4D4D4;
+      box-shadow: none;
+      outline: none;
+    }
+}
+
 label {
   @extend %h;
+  font-family: inherit;
   font-size: 1em;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 input,
