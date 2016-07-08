@@ -1,5 +1,4 @@
 @mixin text-inputs(){
-    &[type="color"],
     &[type^="date"],
     &[type="email"],
     &[type="url"],
@@ -7,12 +6,13 @@
     &[type="number"],
     &[type="text"],
     &[type="tel"],
-    &[type="password"], {
+    &[type="password"] {
         @content;
     }
 }
 
 @mixin non-text-inputs(){
+    &[type="color"],
     &[type="button"],
     &[type="checkbox"],
     &[type="color"],
@@ -20,32 +20,26 @@
     &[type="range"],
     &[type="image"],
     &[type="reset"],
-    &[type="radio"], {
+    &[type="submit"],
+    &[type="radio"] {
         @content;
     }
 }
 
-%text-input {
-    border-radius: map-get($THEME, radius);
-    box-shadow: 0 0 0 transparent;
-    box-sizing: border-box;
-    height: 2.5em;
-    font-family: map-get($FONT, family);
-    font-size: 1em;
-    line-height: inherit;
-    background-color: #FFFFFF;
-    border: 1px solid #D4D4D4;
-    color: inherit;
-
-    &:focus {
-      border: 1px solid #D4D4D4;
-      box-shadow: none;
-      outline: none;
-    }
+@mixin input {
+  margin-bottom: 1em;
+  width: 100%;
+  border-radius: map-get($THEME, radius);
+  box-sizing: border-box;
+  box-shadow: none;
+  height: 2.5em;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  color: inherit;
 }
 
 label {
-  @extend %h;
   font-family: inherit;
   font-size: 1em;
   font-weight: inherit;
@@ -53,25 +47,19 @@ label {
   color: inherit;
 }
 
-input,
-select {
-  margin-bottom: 1em;
-}
-
 input {
   &[type="radio"],
   &[type="checkbox"] {
-      margin-right: 0.3em;
+    margin-right: 0.3em;
   }
 }
 
 select {
-  @extend %text-input;
-  width: 98%;
-  margin-left: 1%;
-  margin-right: 1%;
+  @include input;
 }
 
 input {
-  @extend %text-input;
+  @include text-inputs {
+    @include input;
+  }
 }
