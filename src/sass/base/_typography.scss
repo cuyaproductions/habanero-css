@@ -3,8 +3,8 @@
 // Typography scale is very important for consistency. Habanero implements the Major Third (1.250) scale. Visit [Type Scale](http://type-scale.com/?size=14&scale=1.250&text=A Visual Type Scale&webfont=Libre+Baskerville&font-family='Libre Baskerville', serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333) for more information.
 //
 // Styleguide 2
-.vendor-container {
-  font-family: Arial, Helvetica, sans-serif;
+& {
+  font-family: Impact, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.45em;
 }
@@ -23,9 +23,9 @@
 // Styleguide 2.1
 p {
   margin-bottom: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  line-height: 1.45em;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.45;
 }
 
 // Utilities
@@ -93,7 +93,7 @@ h4,
   font-size: 1.25em;
 }
 
-.h3 {
+.h4 {
   display: block;
 }
 
