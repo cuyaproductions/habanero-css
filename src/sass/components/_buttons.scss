@@ -9,6 +9,7 @@
   padding: 0.5em 1.5em;
   font-family: inherit;
   font-size: 1em;
+  font-weight: inherit;
   line-height: 1.5;
   text-decoration: none;
   color: inherit;
@@ -17,7 +18,7 @@
 
   &:hover {
     text-decoration: none;
-    background: darken(map-get($THEME, color), 10%);
+    opacity: 0.9;
   }
 
   &:focus {
