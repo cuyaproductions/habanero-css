@@ -1,9 +1,9 @@
-#vendor-container {
+.vendor-container {
   @import "variables";
 
   @import "base/typography";
+  @import "base/links";
   @import "base/lists";
-  @import "base/rules";
   @import "base/forms";
 
   @import "components/grid";

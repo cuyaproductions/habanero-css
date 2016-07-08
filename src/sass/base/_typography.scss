@@ -69,7 +69,7 @@ h1,
   display: block;
 }
 
-h2 {
+@at-root #{&}#{&} h2 {
   @include header;
   overflow: visible;
   padding: 0;
