@@ -1,0 +1,12 @@
+a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: map-get($THEME, color);
+
+
+  &:hover {
+    font-weight: inherit;
+    color: map-get($THEME, color);
+  }
+}
