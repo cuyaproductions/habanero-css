@@ -1,24 +1,3 @@
-%list-base {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 2em;
-  padding: 0;
-  line-height: 1.45em;
-}
-
-%list-bullet {
-  margin-bottom: 0.8em;
-  margin-left: 0;
-  padding-left: 0.5em;
-  line-height: 1.45em;
-}
-
-@mixin list-none {
-  margin-bottom: 0.8em;
-  line-height: 1.45em;
-}
-
-
 ul, ol {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -27,6 +6,7 @@ ul, ol {
   line-height: 1.45;
 
   li {
-    @include list-none;
+    margin-bottom: 0.8em;
+    line-height: 1.45em;
   }
 }
