@@ -13,7 +13,7 @@
   line-height: 1.45em;
 }
 
-%list-none {
+@mixin list-none {
   margin-bottom: 0.8em;
   line-height: 1.45em;
 }
@@ -24,9 +24,9 @@ ul, ol {
   margin-bottom: 1em;
   margin-left: 2em;
   padding: 0;
-  line-height: 1.45em;
+  line-height: 1.45;
 
   li {
-    @extend %list-none;
+    @include list-none;
   }
 }

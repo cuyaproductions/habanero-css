@@ -55,13 +55,22 @@
 // </div>
 //
 // Styleguide 1.2.1
+@function col-width($size) {
+  @return 100% / map-get($GRID, columns) * $size;
+}
 
-@for $i from 1 through $col-count {
+@mixin column {
+  display: inline-block;
+  float: left;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through map-get($GRID, columns) {
   .col-#{$i} {
     @include column();
-    width: col-width($i) - $gutter-size;
-    margin-left: $gutter-size / 2;
-    margin-right: $gutter-size / 2;
+    width: col-width($i) - map-get($GRID, gutter);
+    margin-left: map-get($GRID, gutter) / 2;
+    margin-right: map-get($GRID, gutter) / 2;
     /* === NO GUTTER === */
     &.nogutter {
       width: col-width($i);
@@ -92,13 +101,13 @@
   //
   // Styleguide 1.2.3
   .offset-#{$i} {
-    margin-left: (col-width($i) + $gutter-size / 2) !important;
+    margin-left: (col-width($i) + map-get($GRID, gutter) / 2) !important;
     &.nogutter {
       margin-left: col-width($i) !important;
     }
   }
   .push-#{$i} {
-    margin-right: (col-width($i) + $gutter-size / 2) !important;
+    margin-right: (col-width($i) + map-get($GRID, gutter) / 2) !important;
     &.nogutter {
       margin-right: col-width($i) !important;
     }
@@ -124,9 +133,9 @@
 @for $i from 1 through 5 {
   .col-5-#{$i} {
     @include column();
-    width: 100% / 5 * $i - $gutter-size;
-    margin-left: $gutter-size / 2;
-    margin-right: $gutter-size / 2;
+    width: 100% / 5 * $i - map-get($GRID, gutter);
+    margin-left: map-get($GRID, gutter) / 2;
+    margin-right: map-get($GRID, gutter) / 2;
     /* === NO GUTTER === */
     &.nogutter {
       width: 100% / 5 * $i;
@@ -135,13 +144,13 @@
     }
   }
   .offset-5-#{$i} {
-    margin-left: (100% / 5 * $i + $gutter-size / 2) !important;
+    margin-left: (100% / 5 * $i + map-get($GRID, gutter) / 2) !important;
     &.nogutter {
       margin-left: (100% / 5 * $i) !important;
     }
   }
   .push-5-#{$i} {
-    margin-right: (100% / 5 * $i + $gutter-size / 2) !important;
+    margin-right: (100% / 5 * $i + map-get($GRID, gutter) / 2) !important;
     &.nogutter {
       margin-right: (100% / 5 * $i) !important;
     }

@@ -94,17 +94,17 @@ ol {
 
 
 
-  @for $i from 1 through $col-count {
+  @for $i from 1 through map-get($GRID, columns) {
     .col-#{$i} {
-      width: 100% / $col-count * $i - $gutter-size;
+      width: 100% / map-get($GRID, columns) * $i - map-get($GRID, gutter);
     }
 
     .col-push-#{$i} {
-      margin-left: 100% / $col-count * $i;
+      margin-left: 100% / map-get($GRID, columns) * $i;
     }
 
     .col-pull-#{$i} {
-      margin-right: 100% / $col-count * $i;
+      margin-right: 100% / map-get($GRID, columns) * $i;
     }
   }
   @for $i from 1 through 5 {

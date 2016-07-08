@@ -1,10 +1,5 @@
-.sui-opt-in .vendor-container {
-  @import "dependencies/mixins";
-  @import "dependencies/variables";
-  @import "dependencies/colors";
-  @import "dependencies/typography";
-  @import "dependencies/forms";
-  @import "dependencies/grid";
+#vendor-container {
+  @import "variables";
 
   @import "base/typography";
   @import "base/lists";
