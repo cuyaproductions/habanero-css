@@ -1,9 +1,0 @@
-a {
-  @include specificity(1) {
-    @include set-type($typography, base, size, color);
-
-    &:hover {
-      @include set-type($typography, base, size, color, family);
-    }
-  }
-}

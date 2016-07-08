@@ -1,5 +1,0 @@
-hr {
-  @include specificity(1) {
-    border-top-color: $text-color;
-  }
-}

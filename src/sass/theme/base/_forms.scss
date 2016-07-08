@@ -1,8 +1,0 @@
-input,
-select {
-  @include specificity(1) {
-    @include set-type($typography, base);
-    border-radius: $border-radius;
-    color: $text-color;
-  }
-}

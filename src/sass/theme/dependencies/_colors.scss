@@ -1,7 +1,0 @@
-$text-color: map-get(map-get($typography, base), color);
-
-$brand-colors: map-merge($colors, (
-  "white": #ffffff,
-  "black": #000000
-  )
-);
