@@ -6,13 +6,18 @@
   @import "base/rules";
   @import "base/forms";
 
-  @import "utilities/main";
-  @import "utilities/typography";
-  @import "utilities/layout";
-  @import "utilities/lists";
-
   @import "components/grid";
   @import "components/buttons";
   @import "components/navigation";
   @import "components/depreciate";
+
+  // Utilities
+  //
+  // These classes are narrowly focused utilities to help you modify an element quickly
+  //
+  // Styleguide 4
+  @import "utilities/typography";
+  @import "utilities/layout";
+  @import "utilities/lists";
+
 }
