@@ -17,6 +17,7 @@
   background: map-get($THEME, color);
 
   &:hover {
+    color: inherit;
     text-decoration: none;
     opacity: 0.9;
   }

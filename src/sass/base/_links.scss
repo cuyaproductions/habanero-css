@@ -7,6 +7,6 @@ a {
 
   &:hover {
     font-weight: inherit;
-    color: map-get($THEME, color);
+    color: inherit;
   }
 }

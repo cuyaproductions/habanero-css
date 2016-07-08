@@ -1,12 +1,13 @@
 @mixin text-inputs(){
-    &[type^="date"],
-    &[type="email"],
-    &[type="url"],
-    &[type="search"],
-    &[type="number"],
-    &[type="text"],
-    &[type="tel"],
-    &[type="password"] {
+    [type^="date"],
+    [type="email"],
+    [type="url"],
+    [type="search"],
+    [type="number"],
+    [type="text"],
+    [type="tel"],
+    [type="password"],
+    select {
         @content;
     }
 }
@@ -55,12 +56,6 @@ input {
   }
 }
 
-select {
+@include text-inputs {
   @include input;
-}
-
-input {
-  @include text-inputs {
-    @include input;
-  }
 }

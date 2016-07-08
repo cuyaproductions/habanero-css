@@ -77,13 +77,6 @@
       margin-left: 0;
       margin-right: 0;
     }
-
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
   }
   // Spacing
   //
@@ -150,6 +143,7 @@
       margin-right: 0;
     }
   }
+
   .offset-5-#{$i} {
     margin-left: calc(#{col-width($i, 5)} + #{map-get($GRID, gutter) / 2}) !important;
     &.nogutter {
