@@ -26,16 +26,16 @@
 }
 
 %text-input {
-    border-radius: $theme-radius;
+    border-radius: map-get($THEME, radius);
     box-shadow: 0 0 0 transparent;
     box-sizing: border-box;
     height: 2.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: map-get($FONT, family);
     font-size: 1em;
-    line-height: 1.45em;
+    line-height: inherit;
     background-color: #FFFFFF;
     border: 1px solid #D4D4D4;
-    color: #000000;
+    color: inherit;
 
     &:focus {
       border: 1px solid #D4D4D4;

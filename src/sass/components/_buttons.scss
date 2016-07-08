@@ -1,28 +1,28 @@
 .btn {
-  border-radius: $theme-radius;
+  border-radius: map-get($THEME, radius);
   box-sizing: border-box;
   box-shadow: none;
   display: inline-block;
   height: auto;
   margin-top: 0.7em;
-  margin-right: 0.3em;
   margin-bottom: 1.3em;
   padding: 0.5em 1.5em;
   font-family: inherit;
   font-size: 1em;
   line-height: 1.5;
   text-decoration: none;
+  color: inherit;
   border: none;
-  background: $theme-color;
+  background: map-get($THEME, color);
 
   &:hover {
     text-decoration: none;
-    background: darken($theme-color, 10%);
+    background: darken(map-get($THEME, color), 10%);
   }
 
   &:focus {
-    box-shadow: none;
-    outline: 0;
+    border: none;
+    outline: auto;
   }
 
   &.btn__lg {

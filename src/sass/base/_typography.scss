@@ -4,9 +4,10 @@
 //
 // Styleguide 2
 & {
-  font-family: Impact, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.45em;
+  font-family: map-get($FONT, family);
+  font-size: map-get($FONT, size);
+  line-height: map-get($FONT, height);
+  color: red;
 }
 
 // Base
@@ -25,7 +26,8 @@ p {
   margin-bottom: 1em;
   font-family: inherit;
   font-size: 1em;
-  line-height: 1.45;
+  line-height: inherit;
+  color: inherit;
 }
 
 // Utilities
@@ -60,15 +62,11 @@ h1,
 
 h2 {
   @extend %h;
-  display: block;
-  height: initial;
   overflow: visible;
   padding: 0;
   border: none;
   font-size: 1.953em;
-  font-style: normal;
-  font-weight: normal;
-  color: #000000;
+  font-style: inherit;
 }
 
 .h2 {
